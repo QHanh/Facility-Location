@@ -1,2 +1,2 @@
 # Facility-Location
-Project II
+Project II - Select the optimal location for water vending machine at HUST
