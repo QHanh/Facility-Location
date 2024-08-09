@@ -33,12 +33,14 @@ for i in location:
     for j in location:
         prob += Y[i][j] <= Y[j][j]
 
-#prob.writeLP("p-median.lp")
-#print(prob)
+prob.writeLP("P-median.lp")
+
 prob.solve()
 
 print("Status:", LpStatus[prob.status])
-print("Objective: ", value(prob.objective))
+
 
 for v in prob.variables():
     print(v.name.replace(" ", "_"), "=", v.varValue)
+    
+print("Objective: ", value(prob.objective))
